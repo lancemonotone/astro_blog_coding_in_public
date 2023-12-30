@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@iconify-json/mingcute": "^1.1.14",
+    "@iconify-json/tabler": "^1.1.102",
     "node-fetch": "^3.3.2",
     "postcss-custom-media": "^10.0.2",
     "sass": "^1.69.6"
