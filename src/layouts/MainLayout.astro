@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title,
-  description,
+  title = "Lance Monotone",
+  description = "Welcome to my deepness",
 } = Astro.props as Props
 ---
 
@@ -18,7 +18,9 @@ const {
 <MainHead {title} {description} />
 <body>
 <Nav />
-<slot />
+<main>
+  <slot />
+</main>
 <Footer />
 </body>
 </html>

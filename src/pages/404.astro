@@ -1,0 +1,21 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import NavLink from "../components/NavLink.astro"
+---
+
+<MainLayout title="Page Not Found">
+  <section class="container not-found" aria-label="404: Page not found">
+    <h1 class="h1">
+      Well this is awkard!
+    </h1>
+    <p>We seem to have misplaced our page.</p>
+    <NavLink href={"/"}
+             style={"secondary"}
+             text={"Go home"}
+             icon={{
+               name: "tabler:home",
+               side: "right",
+             }} />
+
+  </section>
+</MainLayout>

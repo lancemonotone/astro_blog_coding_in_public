@@ -13,6 +13,10 @@ const navData: NavData[] = [
     link: "/about",
   },
   {
+    title: "Blog",
+    link: "/blog",
+  },
+  {
     title: "Contact",
     link: "/contact",
   },

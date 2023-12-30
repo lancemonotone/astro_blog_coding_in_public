@@ -3,3 +3,22 @@
         fill: #fff;
     }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-block-end: .5em;
+}
+
+.container {
+    &.not-found {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+}
