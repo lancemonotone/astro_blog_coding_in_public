@@ -375,10 +375,10 @@ button {
         margin-inline: auto;
         gap: var(--space-sm);
 
-    / / noinspection CssUnknownProperty @media (--sm) {
-        display: flex;
-        justify-content: space-between;
-    }
+        @media (--sm) {
+            display: flex;
+            justify-content: space-between;
+        }
 
         & a {
             display: flex;
@@ -396,10 +396,10 @@ button {
     align-items: center;
     margin-block: var(--space-xl);
 
-/ / noinspection CssUnknownProperty @media (--md) {
-    grid-template-columns: 1fr 2fr;
-    place-content: center;
-}
+    @media (--md) {
+        grid-template-columns: 1fr 2fr;
+        place-content: center;
+    }
 
     & img {
         border-radius: var(--radius-full);
@@ -409,9 +409,9 @@ button {
         object-fit: cover;
         object-position: center;
 
-    / / noinspection CssUnknownProperty @media (--md) {
-        justify-self: end;
-    }
+        @media (--md) {
+            justify-self: end;
+        }
     }
 
     & .content {
@@ -429,11 +429,12 @@ button {
     gap: var(--space-md);
     align-items: start;
 
-/ / noinspection CssUnknownProperty @media (--md) {
-    grid-template-columns: 1fr 1fr;
-} / / noinspection CssUnknownProperty @media (--lg) {
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    @media (--md) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (--lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .badge {
@@ -526,45 +527,47 @@ header {
         gap: var(--space-lg);
         margin-block-start: var(--space-xl);
 
-    / / noinspection CssUnknownProperty @media (--md) {
-        margin: 0;
-    }
+        @media (--md) {
+            margin: 0;
+        }
 
         & aside {
             display: grid;
             gap: var(--space-2xs);
             padding: 0;
 
-        / / noinspection CssUnknownProperty @media (--sm) {
-            flex: 1 1 40%;
-        } / / noinspection CssUnknownProperty @media (--md) {
-            text-align: left;
-            justify-content: start;
-            justify-items: start;
-
-            & .categories {
-                justify-content: start;
+            @media (--sm) {
+                flex: 1 1 40%;
             }
-        }
+            @media (--md) {
+                text-align: left;
+                justify-content: start;
+                justify-items: start;
+
+                & .categories {
+                    justify-content: start;
+                }
+            }
         }
     }
 
-/ / noinspection CssUnknownProperty @media (--md) {
-    grid-template-columns: 1fr minmax(auto, 220px);
-    gap: var(--space-lg);
-    align-items: start;
-} / / noinspection CssUnknownProperty @media (--lg) {
-    grid-template-columns: 1fr minmax(auto, 300px);
-}
+    @media (--md) {
+        grid-template-columns: 1fr minmax(auto, 220px);
+        gap: var(--space-lg);
+        align-items: start;
+    }
+    @media (--lg) {
+        grid-template-columns: 1fr minmax(auto, 300px);
+    }
 }
 
 .hero-image {
     box-shadow: var(--shadow-md);
     object-fit: cover;
 
-/ / noinspection CssUnknownProperty @media (--lg) {
-    border-radius: var(--radius-md);
-}
+    @media (--lg) {
+        border-radius: var(--radius-md);
+    }
 }
 
 /* category cloud */
