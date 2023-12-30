@@ -3,15 +3,39 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "dev": "astro dev && prettier --write .",
+    "start": "astro dev && prettier --write .",
+    "build": "prettier --write . && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@fontsource/atkinson-hyperlegible": "^5.0.18",
     "astro": "^4.0.8",
+    "astro-font": "^0.0.59",
+    "astro-icon": "^1.0.1",
+    "autoprefixer": "^10.4.16",
+    "postcss-preset-env": "^9.3.0",
+    "prettier": "^3.1.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@iconify-json/mingcute": "^1.1.14",
+    "node-fetch": "^3.3.2",
+    "sass": "^1.69.6"
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "not IE 11",
+      "not IE_Mob 11",
+      "maintained node versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
