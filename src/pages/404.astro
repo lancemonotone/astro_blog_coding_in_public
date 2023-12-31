@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import NavLink from "../components/NavLink.astro"
+import Link from "../components/Link.astro"
 ---
 
 <MainLayout title="Page Not Found">
@@ -9,13 +9,13 @@ import NavLink from "../components/NavLink.astro"
       Well this is awkard!
     </h1>
     <p>We seem to have misplaced our page.</p>
-    <NavLink href={"/"}
-             style={"secondary"}
-             text={"Go home"}
-             icon={{
-               name: "tabler:home",
-               side: "right",
-             }} />
+    <Link href={"/"}
+          style={"secondary"}
+          text={"Go home"}
+          icon={{
+            name: "tabler:home",
+            side: "right",
+          }} />
 
   </section>
 </MainLayout>

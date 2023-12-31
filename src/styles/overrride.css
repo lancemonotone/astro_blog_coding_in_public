@@ -14,6 +14,12 @@ p {
     margin-block-end: .5em;
 }
 
+img,
+picture {
+    object-fit: contain;
+    height: auto;
+}
+
 .container {
     &.not-found {
         display: grid;
