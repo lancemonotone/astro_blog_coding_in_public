@@ -2,17 +2,17 @@
 import { getCollection } from "astro:content"
 const allBlogPosts = await getCollection("blog")
 import MainLayout from "../../layouts/MainLayout.astro"
+import PostCard from "../../components/PostCard.astro"
 ---
 
 <MainLayout title="Blog" description="Welcome to our blog page">
-  <h2>My Blog</h2>
-  <p>Welcome to my blog! Here we share our thoughts, news, and updates.</p>
-
-  <ul>
-    {allBlogPosts.map(post => (
-      <li>
-        <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-      </li>
-    ))}
-  </ul>
+  <section class="container" aria-label="Blog Posts">
+    <h1 class="h1">My Blog</h1>
+    <p>Welcome to my blog! Here we share our thoughts, news, and updates.</p>
+    <div class="post-container">
+      {allBlogPosts.map(post => (
+        <PostCard {post} />
+      ))}
+    </div>
+  </section>
 </MainLayout>

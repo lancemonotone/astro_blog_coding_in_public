@@ -16,7 +16,6 @@ p {
 
 img,
 picture {
-    object-fit: contain;
     height: auto;
 }
 
@@ -26,5 +25,30 @@ picture {
         place-items: center;
         text-align: center;
         gap: var(--space-sm);
+    }
+}
+
+.post-container {
+    .card {
+        grid-template-rows: subgrid;
+        grid-row: auto / span 6;
+
+        .content {
+            grid-template-rows: subgrid;
+            grid-row: auto / span 4;
+        }
+
+        img {
+            aspect-ratio: 4/3;
+        }
+
+        .featured-image {
+            margin-inline: calc(var(--space-md) * -1);
+            margin-block: var(--space-md);
+        }
+
+        .read-more {
+            align-self: end;
+        }
     }
 }
