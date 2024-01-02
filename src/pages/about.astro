@@ -3,23 +3,24 @@ import { Image } from "astro:assets"
 import MainLayout from "../layouts/MainLayout.astro"
 import Link from "../components/Link.astro"
 
-import myHeadshot from "../assets/images/headshot.jpg"
+import myHeadshot from "../assets/images/Lance---Kim-Clune006.jpg"
 ---
 
 <MainLayout title="About" description="Learn more about us">
-  <section class="container about" aria-label="About me">
+  <section class="about" aria-label="About me">
     <Image
       src={myHeadshot}
       alt="My headshot"
       format="avif"
+      width="600"
     />
 
     <div class="content">
-      <h1 class="h1"> My Blog </h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto blanditiis culpa eaque facere fugiat hic, iure modi sed. Beatae blanditiis commodi cumque cupiditate debitis, deserunt dolor ea enim error et in iusto laudantium maxime nemo nostrum quo, sed voluptatem?</p>
+      <h1 class="h1"> About Me </h1>
+      <p>I'm a full-stack PHP/JS/WordPress developer. I live in the Collar City, where I photograph, code, write baroque pop, mountain bike and restore my 1976 sailboat.</p>
       <Link
-        style={"primary"}
-        text={"Contact Me"}
+        style={"secondary"}
+        text={"📝 Contact Me"}
         href={"mailto:lancemonotone@gmail.com"} />
     </div>
   </section>

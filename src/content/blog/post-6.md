@@ -1,6 +1,6 @@
 ---
 title: Building an Astro Post Tag Component
-date: 2022-12-06
+date: 2024-12-06
 author: Anna Dixon
 image: {
   obj: "../../assets/images/post-6.jpg",
@@ -11,20 +11,65 @@ draft: false
 category: Astro
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do.
-Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+Astro is a powerful front-end framework that allows you to build fast, optimized web applications. One of the key features of Astro is its ability to create reusable components. In this post, we'll
+walk through the process of building a custom Astro component for post tags.
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate.
-Occaecat officia et sunt.
+## Getting Started
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit
-labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit
-excepteur excepteur ex.
+Before we start building our component, make sure you have Astro set up in your project. If you haven't already, you can install Astro using npm with the command `npm install astro`.
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit
-adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor
-nisi magna ut elit pariatur commodo.
+```bash
+npm install astro
+```
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip
-fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est.
-Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+## Creating the Component
+
+To create an Astro component, we start by creating a new `.astro` file in our components directory. Let's call it `PostTag.astro`. In this file, we'll define the structure of our post tag component.
+
+```bash
+---
+// PostTag.astro
+const { tag } = Astro.props;
+---
+<span class="post-tag">{tag}</span>
+```
+
+## Adding Styles
+
+Astro components can have scoped CSS, which means we can define styles that only apply to this component. Let's add some basic styles to make our post tag look nice.
+
+```bash
+---
+// PostTag.astro
+const { tag } = Astro.props;
+---
+<span class="post-tag">{tag}</span>
+
+<style scoped>
+.post-tag {
+  background-color: #efefef;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+</style>
+```
+
+## Using the Component
+
+Now that we've built our post tag component, we can use it in our blog posts. To use an Astro component, we import it like a JavaScript module and then use it like an HTML tag.
+
+```bash
+---
+// In your blog post
+import PostTag from '../components/PostTag.astro';
+---
+<PostTag tag="Astro" />
+```
+
+## Conclusion
+
+Building custom components is a powerful feature of Astro that allows for code reuse and separation of concerns. With our new post tag component, we can easily add tags to our blog posts, and we can
+be confident that they'll all have a consistent style and behavior.
+
+Remember, this is just a basic example. Astro components can be as simple or as complex as you need them to be. You can add props, state, event handlers, and more. The sky's the limit!

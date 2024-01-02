@@ -11,22 +11,41 @@ draft: false
 category: CSS
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do.
-Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+Cascading Style Sheets, or CSS, is the language used to style web pages. It's an essential skill for any web developer, and in this post, we'll cover the basics of using CSS to style your website.
 
-## Well, then. Let’s talk.
+## What is CSS?
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate.
-Occaecat officia et sunt.
+CSS is a stylesheet language used to describe the look and formatting of a document written in HTML. It allows you to control the color of text, the style of fonts, the spacing between paragraphs, how
+columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes, and much more!
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit
-labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit
-excepteur excepteur ex.
+## How to Use CSS
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit
-adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor
-nisi magna ut elit pariatur commodo.
+There are three ways to include CSS in your HTML files:
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip
-fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est.
-Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+1. **Inline styles:** CSS rules are applied directly to the HTML element using the `style` attribute.
+2. **Internal styles:** CSS rules are included in the `<head>` section of the HTML file inside a `<style>` tag.
+3. **External styles:** CSS rules are written in a separate file with a `.css` extension. This file is linked to the HTML file using the `<link>` tag.
+
+## Basic CSS Syntax
+
+A CSS rule-set consists of a selector and a declaration block. The selector points to the HTML element you want to style. The declaration block contains one or more declarations separated by
+semicolons. Each declaration includes a CSS property name and a value, separated by a colon.
+
+```css
+selector {
+    property: value;
+}
+```
+
+## CSS Properties
+
+CSS properties are what actually give the look and feel for the page. There are numerous properties available, including those for:
+
+1. **Layout:** These properties allow you to control the position and size of boxes and to control the flow of content in those boxes.
+2. **Visual:** These properties allow you to control the colors and fonts used in the page.
+3. **Aural:** These properties allow you to control how the page sounds when read out by a screen reader.
+
+## Conclusion
+
+CSS is a powerful tool for controlling the look and feel of your website. While it can seem daunting at first, with practice, you'll be able to create stunning web pages. Remember, the key to learning
+CSS is practice. So, don't be afraid to experiment and try styling your web pages in different ways. Happy coding!

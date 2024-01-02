@@ -1,8 +1,46 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import PostsContainer from "../components/PostsContainer.astro"
+import myHeadshot from "../assets/images/Lance---Kim-Clune006.jpg"
+import { Image } from "astro:assets"
+import Link from "../components/Link.astro"
+
+// Config options
+const limit = 3
+const filterDraft = true
+const filterFuture = true
+const sort = "rand"
 ---
 
 <MainLayout title="Home" description="Welcome to my little corner of the web">
-  <h2>Hello from Lance?</h2>
+  <h1 class="h1">Hello from Lance!</h1>
   <p>My name is Lance and I'm a software engineer from the United States.</p>
+
+  <section class="about" aria-label="About me">
+    <Image
+      src={myHeadshot}
+      alt="My headshot"
+      format="avif"
+      width="600"
+    />
+
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto blanditiis culpa eaque facere fugiat hic, iure modi sed. Beatae blanditiis commodi cumque cupiditate debitis, deserunt dolor ea enim error et in iusto laudantium maxime nemo nostrum quo, sed voluptatem?</p>
+      <Link
+        style={"secondary"}
+        text={"👋 Say hi!"}
+        href={"mailto:lancemonotone@gmail.com"}
+      />
+    </div>
+  </section>
+
+  <section class="recent-posts" aria-label="My recent posts">
+    <h2 class="h2">Recent Posts</h2>
+    <PostsContainer
+      {limit}
+      {filterDraft}
+      {filterFuture}
+      {sort}
+    />
+  </section>
 </MainLayout>

@@ -1,0 +1,26 @@
+---
+import { CollectionEntry, getCollection } from "astro:content"
+import { slugify } from "../../lib/slugify"
+import MainLayout from "../../layouts/MainLayout.astro"
+import PostsContainer from "../../components/PostsContainer.astro"
+
+export async function getStaticPaths() {
+  const entries: CollectionEntry<"blog">[] = await getCollection("blog")
+  return entries.map(entry => ({
+    params: { category: slugify(entry.data.category) }, props: { name: entry.data.category, entries },
+  }))
+}
+
+const { category } = Astro.params
+const { name, entries } = Astro.props
+// console.log("CAT", category, name)
+---
+
+<MainLayout title={`Category - ${name}`}>
+  <h1 class="h1">Posts about
+    <span>{name}</span>
+  </h1>
+  <PostsContainer {entries} filterDraft={false} filterFuture={false} filterCategory={category} />
+</MainLayout>
+
+

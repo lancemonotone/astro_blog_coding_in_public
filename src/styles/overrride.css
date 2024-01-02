@@ -1,7 +1,24 @@
-@layer base {
-    svg[data-icon="logomark"] * {
-        fill: #fff;
-    }
+/* custom media query breakpoints */
+@custom-media --sm (width >=480px);
+@custom-media --md (width >=768px);
+@custom-media --lg (width >=1201px);
+@custom-media --xl (width >=1440px);
+
+body {
+    align-items: start;
+    justify-items: stretch;
+}
+
+pre.astro-code {
+    font-family: "Roboto Mono", monospace;
+    padding: var(--space-sm);
+    /* inner shadow */
+    box-shadow: var(--shadow-sm) inset;
+    border-radius: var(--radius-lg);
+}
+
+svg[data-icon="logomark"] * {
+    fill: #fff;
 }
 
 h1,
@@ -17,6 +34,31 @@ p {
 img,
 picture {
     height: auto;
+}
+
+.link {
+    &.secondary.secondary {
+        --type: hsl(var(--accent));
+        color: hsl(var(--txt));
+    }
+}
+
+.about {
+    --padding: var(--space-md);
+    @media (--md) {
+        --padding: 0 var(--space-md);
+    }
+    margin-block-end: var(--space-3xl);
+    background: hsl(var(--muted));
+    padding: var(--padding);
+    border-radius: var(--radius-md);
+
+    & img {
+        border-radius: 0;
+        @media (--md) {
+            justify-self: start;
+        }
+    }
 }
 
 .container {

@@ -1,6 +1,6 @@
 ---
 title: Why is this CSS so weird?
-date: 2022-12-09
+date: 2024-12-09
 author: Anna Dixon
 image: {
   obj: "../../assets/images/post-4.jpg",
@@ -11,28 +11,75 @@ draft: false
 category: CSS
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do.
-Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+CSS, or Cascading Style Sheets, is a powerful tool that developers use to style their websites. However, if you've taken a look at the global CSS file for this site, you might be wondering, "Why is
+this CSS so weird?" In this post, we'll explore some of the reasons why the CSS might look different than what you're used to.
 
 ## What is CSS?
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate.
-Occaecat officia et sunt.
+CSS is a language used to describe how HTML elements should be displayed on the screen. It allows developers to control layout, colors, fonts, and more. However, CSS can become complex and difficult
+to manage on larger projects. This is where the global CSS file comes in.
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit
-labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit
-excepteur excepteur ex.
+## Why the Global CSS File Looks Weird
 
-## You know?
+The global CSS file for this site might look a bit different than what you'd normally write. This is because it's designed to provide a set of default styles that can be used across the entire site.
+Instead of having to write new CSS rules for each component, you can use the classes provided in the global CSS file.
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa.
+This approach has several benefits:
 
-- Nulla ex velit adipisicing
-- proident fugiat deserunt sunt
-- eu adipisicing sint incididunt quis qui.
+- **Consistency:** By using the same set of styles throughout the site, you can ensure a consistent look and feel.
+- **Efficiency:** It's faster and easier to use existing classes than to write new CSS rules for each component.
+- **Maintainability:** When you need to make a change, you can do it in one place instead of having to update multiple CSS rules.
 
-Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+## Understanding the Global CSS File
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip
-fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est.
-Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+The global CSS file uses a methodology called BEM (Block, Element, Modifier). This is a naming convention for classes in HTML and CSS. Its goal is to help developers better understand the relationship
+between the HTML and CSS in a project.
+
+Here's a quick breakdown of how it works:
+
+- **Block:** A standalone entity that is meaningful on its own.
+- **Element:** A part of a block that has no standalone meaning and is semantically tied to its block.
+- **Modifier:** A flag on a block or element. Use them to change appearance or behavior.
+
+Here's how the BEM examples would look in HTML:
+
+```html
+<!-- Block component -->
+<div class="block">
+  Some content
+</div>
+
+<!-- Element that depends upon the block -->
+<div class="block">
+  <span class="block__element">Some content</span>
+</div>
+
+<!-- Modifier that changes the style of the block -->
+<div class="block block--modifier">
+  Some content
+</div>
+```
+
+And here's how they would look in CSS:
+
+```css
+/* Block component */
+.block {
+    color: #0421f4;
+}
+
+/* Element that depends upon the block */
+.block__element {
+    color: #6200ee;
+}
+
+/* Modifier that changes the style of the block */
+.block--modifier {
+    color: #bb86fc;
+}
+```
+
+## Conclusion
+
+While the global CSS file might look weird at first, it's a powerful tool for managing styles on a larger scale. By using a consistent set of classes, you can style your site more efficiently and
+maintainably. So next time you find yourself writing a bunch of random classes, consider taking a page from the global CSS file instead!

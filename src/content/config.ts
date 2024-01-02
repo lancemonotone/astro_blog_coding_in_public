@@ -8,7 +8,6 @@ const blogCollection = defineCollection({
       date: z.date(), // or z.date() if you want to enforce date objects
       author: z.string(),
       image: z.object({
-        // I wish to prefix '../../assets/images/' to the image filename
         obj: image().refine((img) => img.width >= 600, {
           message: "Image must be at least 600px wide.",
         }),

@@ -6,7 +6,6 @@ import Link from "./Link.astro"
 
 const { post, tag = "h2" } = Astro.props
 const { title, category, date, author, image, description } = post.data
-//console.log("inside", post)
 const url = `/blog/${post.slug}`
 const Tag = tag
 ---
